@@ -5,7 +5,7 @@ user = os.environ['SUDO_USER'] if 'SUDO_USER' in os.environ else os.environ['USE
 home = str(Path.home())
 
 os.system('apt update && apt upgrade -y')
-os.system('apt-get install i3 gnome-terminal ubuntu-drivers-common mesa-utils mesa-tils-extra gnupg xautolock xorg xserver-xorg wget unzip wpasupplicant')
+os.system('apt-get install i3 gnome-terminal ubuntu-drivers-common mesa-utils mesa-utils-extra gnupg xautolock xorg xserver-xorg wget unzip wpasupplicant')
 
 bash_profile = open(f'/home/{user}/.profile', 'a')
 xinitrc = open(f'/home/{user}/.xinitrc', 'a')
@@ -15,4 +15,4 @@ chunk2 = 'export TERMINAL = "gnome-terminal"\nalias open="xdg-open"\ni3'
 bash_profile.write(chunk1)
 xinitrc.write(chunk2)
 
-os.system('reboot now')
+# os.system('reboot now')
