@@ -1,11 +1,10 @@
 #!/bin/sh
-apt-get update
+apt update && sudo apt upgrade
 
 apt-get install -y \
-python3-pip \
-git
+python3 \
 
-cd ~/ && git clone 
+chmod +x install.py && /usr/bin/python3 install.py
 
 #i3 \
 #ubuntu-drivers-common \
